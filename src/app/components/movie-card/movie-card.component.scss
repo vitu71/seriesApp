@@ -1,0 +1,23 @@
+.card{
+  cursor: pointer;
+  .card-img-top{
+    height: 500px;
+    object-fit: cover;
+    background-color: aliceblue;
+  }
+  .card-body {
+    .card-title-point{
+      display: flex;
+      place-content: space-between;
+    }
+    .card-genere {
+      display: flex;
+      flex-wrap: wrap;
+      p {
+        margin-right: 1rem;
+        margin-bottom: 0;
+        color: grey;
+      }
+    }
+  }
+}

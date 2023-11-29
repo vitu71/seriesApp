@@ -1,0 +1,13 @@
+<div class="card h-100" (click)="redirectToDetail(show.id)">
+  <img [src]="checkPoster(show?.image?.original)" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <div class="card-title-point">
+      <h5 class="card-title">{{ show?.name }}</h5> <span class="badge bg-light text-dark" *ngIf="show?.rating?.average"> {{show?.rating?.average}}</span>
+    </div>
+    <div class="card-genere">
+      <p class="card-text" *ngFor="let genre of show.genres">
+        #{{ genre }}
+      </p>
+    </div>
+  </div>
+</div>

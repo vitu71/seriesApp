@@ -1,0 +1,18 @@
+<div class="card mb-1">
+  <img class="card-img-top" src="../../../assets/images/banner.jpg" alt="Card image cap">
+  <div class="card-body">
+    <div class="card-list">
+    <ul class="list-group list-group-flush"  *ngFor="let genre of genres">
+      <li class="list-group-item"  (click)="getListByGender(genre)">{{genre}}</li>
+    </ul>
+  </div>
+  </div>
+</div>
+<div class="center-text">
+<h5 >The best application for shows</h5>
+</div>
+<app-movie-list></app-movie-list>
+
+
+
+    

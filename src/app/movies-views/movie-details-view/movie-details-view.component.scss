@@ -1,0 +1,54 @@
+.container-fluid {
+  .container {
+    .card-max-size{
+      max-width: 600px;
+      margin: auto;
+    }
+    .card {
+      .card-img-top{
+        height: 500px;
+        object-fit: contain;
+        background-color:black;
+      }
+      .card-body {
+        .card-info-margin {
+          margin-bottom: 1rem;
+          .card-actors{
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        .card-rating-time-container {
+          display: flex;
+          justify-content: space-between;
+          .card-movie-detail-container {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        .card-title-border {
+          border-bottom: 1px solid black;
+        }
+        .card-hastag {
+          .card-genre-info {
+            display: flex;
+            flex-flow: wrap;
+            span {
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.actions_position {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  :first-child {
+    margin-bottom: 0.5rem;
+  }
+}

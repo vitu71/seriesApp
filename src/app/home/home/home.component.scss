@@ -1,0 +1,26 @@
+.card{
+    border:none;
+.card-img-top{
+    max-height: 400px;
+    object-fit: cover;
+}
+.card-body{
+    padding: 2rem 2rem;
+    .card-list{
+        display: flex;
+        overflow-x: auto;
+    }
+}
+.list-group-flush > .list-group-item:first-child {
+    padding-left: 0;
+}
+.list-group-flush{
+    li{
+        cursor: pointer;
+        width: max-content;
+    }
+}
+}
+.center-text{
+    text-align: center;
+}

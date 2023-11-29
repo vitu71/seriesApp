@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <div class="container">
+    <ng-container *ngIf="!show; else elseTemplate">
+      <div class="card card-max-size" *ngFor="let item of generateFakeCard(1)">
+        <ngx-skeleton-loader
+          [theme]="{ height: '500px', width: '100%'  }"
+        ></ngx-skeleton-loader>
+        <div class="card-body">
+          <div class="card-rating-time-container card-info-margin">
+            <div class="card-movie-detail-container">
+              <ngx-skeleton-loader [theme]="{'background-color': 'rgb(226 227 229)'}"></ngx-skeleton-loader>
+            </div>
+            <div class="card-movie-detail-container">
+              <ngx-skeleton-loader [theme]="{'background-color': 'rgb(226 227 229)'}"></ngx-skeleton-loader>
+            </div>
+          </div>
+          <div class="card-info-margin">
+            <ngx-skeleton-loader [theme]="{'background-color': 'rgb(226 227 229)'}"></ngx-skeleton-loader>
+          </div>
+          <div class="card-info-margin">
+            <ngx-skeleton-loader [theme]="{'background-color': 'rgb(226 227 229)'}"></ngx-skeleton-loader>
+          </div>
+          <div class="card-hastag card-info-margin">
+            <ngx-skeleton-loader [theme]="{'background-color': 'rgb(226 227 229)'}"></ngx-skeleton-loader>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <div class="card card-max-size">
+        <img [src]="getPoster( show?.image?.original)" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <div style="    display: flex;
+          align-items: center;
+          place-content: space-between;">
+          <h3>
+            {{show.name}} 
+
+          </h3>
+          <h3 style="color: red;">{{show.rating?.average}}</h3>
+        </div>
+        <div style="margin-bottom: 0.5rem;"><span style="font-weight: 500;" >Schedule: </span><div>
+          <span >{{show.schedule?.days}} at </span> 
+            <span >{{show.schedule?.time }}</span>
+          </div>
+        </div>
+          <div class="card-rating-time-container card-info-margin">
+            <div class="card-movie-detail-container">
+              <a [href]="show.officialSite"  target="_blank"> Website</a>
+              <span>{{ show.language }}</span>
+            </div>
+            <div class="card-movie-detail-container">
+              <span>{{show.premiered |date}}</span>
+              <span>{{  show.runtime | convertMinutes }}</span>
+            </div>
+          </div>
+          <div class="card-info-margin">
+            <h5 class="card-title card-title-border">Sumary</h5>
+            <p [innerHTML]="show.summary"></p>
+          </div>
+          <div class="card-hastag card-info-margin">
+            <h5 class="card-title card-title-border">Genres</h5>
+            <div class="card-genre-info">
+              <span
+                class="card-text"
+                *ngFor="let genre of show?.genres"
+              >
+                #{{ genre }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

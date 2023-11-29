@@ -1,0 +1,59 @@
+{
+  "header": {
+    "movies": "Tv APP",
+    "actors": "Actores",
+    "company": "Estudios",
+    "newMovie": "Nueva película"
+  },
+  "movieDetails": {
+    "rating": "Puntuación",
+    "duration": "Duración",
+    "actors": "Actores",
+    "company": "Estudios",
+    "genders": "Géneros"
+  },
+  "formNewMovie": {
+    "title": "Título",
+    "poster": "Póster(url)",
+    "gender": "Añada generos",
+    "actor": "Seleccione actores",
+    "company": "Seleccione productora",
+    "year": "Año",
+    "duration": "Duración (minutos)",
+    "rating": "Puntuación"
+  },
+  "modal": {
+    "form": {
+      "error": {
+        "title": "Error",
+        "textBody": "Por favor, compruebe el formulario y vuelva a intentarlo."
+      }
+    },
+    "modify": {
+      "ok": {
+        "title": "Película modificada",
+        "textBody": "Película modificada correctamente"
+      },
+      "error": {
+        "title": "Error",
+        "textBody": "Error al modificar la película"
+      }
+    },
+    "warning": {
+      "title": "Eliminar película",
+      "textBody": "¿Realmente desea eliminar la película?",
+      "accept": "Sí",
+      "refuse": "No"
+    },
+    "delete": {
+      "ok": {
+        "title": "Película eliminada ",
+        "textBody": "Película eliminada correctamente"
+      },
+      "error": {
+        "title": "Error",
+        "textBody": "Error al eliminar película."
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.container-fluid {
+  .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+.ngx-pagination {
+  padding-left: 0;
+}
+
+
+@media screen and (min-width: 770px) {
+  .container-fluid {
+    .container {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .container-fluid {
+    .container {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+}

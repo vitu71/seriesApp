@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="d-flex  justify-content-center mb-2">
+      <button type="button" class="btn btn-light" (click)="sortList()">Sort by rating</button>
+
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <ng-container
+        *ngIf="
+          (controllerService?.showsByGender | async)?.length === 0;
+          else elseTemplate
+        "
+      >
+      <div class="col" *ngFor="let item of generateFakeCards(10)">
+            <div class="card h-100">
+            <ngx-skeleton-loader
+              [theme]="{
+                height: '500px',
+                width: '100%',
+                'background-color': 'rgb(226 227 229)'
+              }"
+            ></ngx-skeleton-loader>
+            <div class="card-body">
+              <h5 class="card-title">
+                <ngx-skeleton-loader
+                  [theme]="{ 'background-color': 'rgb(226 227 229)' }"
+                ></ngx-skeleton-loader>
+              </h5>
+              <div class="card-genere">
+                <ngx-skeleton-loader
+                  [theme]="{ height: '30px' }"
+                ></ngx-skeleton-loader>
+              </div>
+            </div>
+        </div>
+      </div>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <app-movie-card
+          [show]="show"
+          *ngFor="
+            let show of controllerService.showsByGender | async | paginate: { itemsPerPage: 50, currentPage: p };
+            trackBy: trackMovies"
+            class="col"
+
+        ></app-movie-card>
+      </ng-template>
+    </div>
+    <div class="movie-list-pagination">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>
